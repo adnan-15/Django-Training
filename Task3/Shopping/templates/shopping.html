@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+{% load static %}
+
+<head>
+    <title>Shopping Hub</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'mycss.css' %}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>SHOPPING HUB</h1>
+        <p>Explore your favourite shopping platforms</p>
+    </header>
+
+
+    <!-- Shopping Platforms -->
+    <section class="shopping-section">
+
+        <div class="shop-card">
+            <img src="{% static 'amazon.jpg' %}" alt="Amazon">
+            <h2>Amazon</h2>
+            <a href="https://www.amazon.in" target="_blank">
+                Visit Amazon
+            </a>
+        </div>
+
+        <div class="shop-card">
+            <img src="{% static 'flipkart.png' %}" alt="Flipkart">
+            <h2>Flipkart</h2>
+            <a href="https://www.flipkart.com" target="_blank">
+                Visit Flipkart
+            </a>
+        </div>
+
+        <div class="shop-card">
+            <img src="{% static 'meesho.png' %}" alt="Meesho">
+            <h2>Meesho</h2>
+            <a href="https://www.meesho.com" target="_blank">
+                Visit Meesho
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- Shopping Video -->
+    <section class="video-section">
+
+        <h2>🛍️ Shopping Video</h2>
+
+        <video controls>
+            <source src="{% static 'shopping_vd.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!-- Font & Icon Dependencies -->
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cloudflare.com">
+
+<!-- Background Container Wrapper -->
+<div style="min-height: 80vh; display: flex; align-items: center; justify-content: center; font-family: 'Inter', system-ui, -apple-system, sans-serif; background-color: #f8fafc; padding: 20px;">
+  
+  <!-- Success Modal Box -->
+  <div style="background: #ffffff; max-width: 480px; width: 100%; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; padding: 40px 32px; text-align: center; box-sizing: border-box;">
+    
+    <!-- Animated Style Check Banner -->
+    <div style="background-color: #dcfce7; color: #16a34a; width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 24px auto;">
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+    
+    <!-- Header Notification -->
+    <h2 style="margin: 0 0 8px 0; font-size: 24px; font-weight: 700; color: #0f172a; letter-spacing: -0.02em;">Book Issued Successfully!</h2>
+    <p style="margin: 0 0 32px 0; font-size: 14px; color: #64748b;">The transaction transaction logs have been updated.</p>
+    
+    <!-- Receipt Info Box -->
+    <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; text-align: left; margin-bottom: 32px; display: flex; flex-direction: column; gap: 14px;">
+      
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; font-size: 14px;">
+        <span style="color: #64748b; font-weight: 500;">Book Title</span>
+        <span style="color: #0f172a; font-weight: 600; text-align: right; max-width: 60%;">{{ book.book_name }}</span>
+      </div>
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px; border-top: 1px dashed #e2e8f0; padding-top: 12px;">
+        <span style="color: #64748b; font-weight: 500;">Issued To</span>
+        <span style="color: #334155; font-weight: 600;">{{ book.student_name }}</span>
+      </div>
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px; border-top: 1px dashed #e2e8f0; padding-top: 12px;">
+        <span style="color: #64748b; font-weight: 500;">Issue Date</span>
+        <span style="color: #334155; font-weight: 500; font-family: monospace;">{{ book.issue_date }}</span>
+      </div>
+      
+    </div>
+    
+    <!-- Primary Quick Actions Grid -->
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <a href="/books" style="display: flex; align-items: center; justify-content: center; gap: 8px; background-color: #4f46e5; color: #ffffff; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 15px; box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2); transition: background-color 0.2s;">
+        <i class="fa-regular fa-eye"></i> View All Books
+      </a>
+      
+      <a href="/dashboard" style="display: flex; align-items: center; justify-content: center; gap: 8px; background-color: #ffffff; border: 1px solid #e2e8f0; color: #334155; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: 500; font-size: 15px; transition: background-color 0.2s;">
+        <i class="fa-solid fa-house" style="color: #64748b; font-size: 14px;"></i> Back to Dashboard
+      </a>
+    </div>
+    
+    <!-- Footer Sub-Navigation Link -->
+    <div style="margin-top: 32px; border-top: 1px solid #f1f5f9; padding-top: 20px;">
+      <a href="/logout" style="color: #ef4444; text-decoration: none; font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout / Back to Home
+      </a>
+    </div>
+    
+  </div>
+</div>

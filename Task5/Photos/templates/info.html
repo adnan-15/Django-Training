@@ -1,0 +1,469 @@
+{% extends 'master.html' %}
+{% block content %}
+<!-- Info Page Content -->
+
+<section class="max-w-7xl mx-auto px-6 py-12">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+
+        <span class="inline-block px-4 py-2 mb-4 rounded-full
+                     bg-cyan-400/10 border border-cyan-400/30
+                     text-cyan-300 text-sm font-medium">
+            🌍 Explore The World
+        </span>
+
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-5
+                   bg-gradient-to-r from-cyan-400
+                   via-purple-400 to-pink-400
+                   bg-clip-text text-transparent">
+            Beautiful Places
+        </h2>
+
+        <p class="max-w-2xl mx-auto text-gray-400 text-lg">
+            Discover some of the most beautiful destinations around
+            the world through our collection of amazing places.
+        </p>
+
+    </div>
+
+
+    <!-- Featured Place -->
+    <div class="group relative mb-12 overflow-hidden
+                rounded-3xl border border-white/10
+                bg-white/5">
+
+        <img
+            src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1400&q=85"
+            alt="Beautiful mountain landscape"
+            class="w-full h-[450px] md:h-[550px] object-cover
+                   transition duration-1000
+                   group-hover:scale-105">
+
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0
+                    bg-gradient-to-t from-black/90
+                    via-black/30 to-transparent">
+        </div>
+
+        <!-- Content -->
+        <div class="absolute bottom-0 left-0 p-7 md:p-12">
+
+            <span class="text-cyan-300 text-sm font-semibold">
+                ⭐ FEATURED DESTINATION
+            </span>
+
+            <h3 class="text-3xl md:text-5xl font-bold mt-3">
+                Discover The Mountains
+            </h3>
+
+            <p class="text-gray-300 mt-3 max-w-xl">
+                Escape into nature and experience breathtaking
+                landscapes, peaceful surroundings and unforgettable
+                adventures.
+            </p>
+
+            <button class="mt-6 px-6 py-3 rounded-xl
+                           bg-cyan-400 text-slate-950
+                           font-semibold
+                           hover:bg-cyan-300
+                           hover:scale-105
+                           transition-all duration-300">
+                Explore Place →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Places Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+                gap-7">
+
+
+        <!-- Place 1 -->
+        <div class="group relative overflow-hidden
+                    rounded-3xl border border-white/10
+                    bg-white/5
+                    hover:border-cyan-400/50
+                    hover:-translate-y-2
+                    transition-all duration-500">
+
+            <div class="relative overflow-hidden">
+
+                <img
+                    src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=85"
+                    alt="Cinque Terre Italy"
+                    class="w-full h-72 object-cover
+                           transition duration-700
+                           group-hover:scale-110">
+
+                <span class="absolute top-4 left-4
+                             px-3 py-1 rounded-full
+                             bg-cyan-400 text-slate-950
+                             text-xs font-bold">
+                    ITALY
+                </span>
+
+            </div>
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold">
+                    Cinque Terre
+                </h3>
+
+                <p class="text-gray-400 mt-2">
+                    Colorful coastal villages surrounded by
+                    beautiful Mediterranean landscapes.
+                </p>
+
+                <div class="flex justify-between items-center mt-5">
+
+                    <span class="text-cyan-400 text-sm">
+                        📍 Italy
+                    </span>
+
+                    <button class="text-cyan-300
+                                   hover:text-white
+                                   transition">
+                        Discover →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Place 2 -->
+        <div class="group relative overflow-hidden
+                    rounded-3xl border border-white/10
+                    bg-white/5
+                    hover:border-purple-400/50
+                    hover:-translate-y-2
+                    transition-all duration-500">
+
+            <div class="relative overflow-hidden">
+
+                <img
+                    src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=85"
+                    alt="Tokyo Japan"
+                    class="w-full h-72 object-cover
+                           transition duration-700
+                           group-hover:scale-110">
+
+                <span class="absolute top-4 left-4
+                             px-3 py-1 rounded-full
+                             bg-purple-400 text-slate-950
+                             text-xs font-bold">
+                    JAPAN
+                </span>
+
+            </div>
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold">
+                    Tokyo
+                </h3>
+
+                <p class="text-gray-400 mt-2">
+                    A vibrant city where futuristic technology
+                    meets traditional Japanese culture.
+                </p>
+
+                <div class="flex justify-between items-center mt-5">
+
+                    <span class="text-purple-400 text-sm">
+                        📍 Japan
+                    </span>
+
+                    <button class="text-purple-300
+                                   hover:text-white
+                                   transition">
+                        Discover →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Place 3 -->
+        <div class="group relative overflow-hidden
+                    rounded-3xl border border-white/10
+                    bg-white/5
+                    hover:border-pink-400/50
+                    hover:-translate-y-2
+                    transition-all duration-500">
+
+            <div class="relative overflow-hidden">
+
+                <img
+                    src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=85"
+                    alt="Paris France"
+                    class="w-full h-72 object-cover
+                           transition duration-700
+                           group-hover:scale-110">
+
+                <span class="absolute top-4 left-4
+                             px-3 py-1 rounded-full
+                             bg-pink-400 text-slate-950
+                             text-xs font-bold">
+                    FRANCE
+                </span>
+
+            </div>
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold">
+                    Paris
+                </h3>
+
+                <p class="text-gray-400 mt-2">
+                    Explore elegant streets, historic landmarks
+                    and the romantic atmosphere of Paris.
+                </p>
+
+                <div class="flex justify-between items-center mt-5">
+
+                    <span class="text-pink-400 text-sm">
+                        📍 France
+                    </span>
+
+                    <button class="text-pink-300
+                                   hover:text-white
+                                   transition">
+                        Discover →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Place 4 -->
+        <div class="group relative overflow-hidden
+                    rounded-3xl border border-white/10
+                    bg-white/5
+                    hover:border-green-400/50
+                    hover:-translate-y-2
+                    transition-all duration-500">
+
+            <div class="relative overflow-hidden">
+
+                <img
+                    src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=85"
+                    alt="Dubai city"
+                    class="w-full h-72 object-cover
+                           transition duration-700
+                           group-hover:scale-110">
+
+                <span class="absolute top-4 left-4
+                             px-3 py-1 rounded-full
+                             bg-green-400 text-slate-950
+                             text-xs font-bold">
+                    UAE
+                </span>
+
+            </div>
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold">
+                    Dubai
+                </h3>
+
+                <p class="text-gray-400 mt-2">
+                    A spectacular destination famous for its
+                    modern architecture and luxury experiences.
+                </p>
+
+                <div class="flex justify-between items-center mt-5">
+
+                    <span class="text-green-400 text-sm">
+                        📍 United Arab Emirates
+                    </span>
+
+                    <button class="text-green-300
+                                   hover:text-white
+                                   transition">
+                        Discover →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Place 5 -->
+        <div class="group relative overflow-hidden
+                    rounded-3xl border border-white/10
+                    bg-white/5
+                    hover:border-orange-400/50
+                    hover:-translate-y-2
+                    transition-all duration-500">
+
+            <div class="relative overflow-hidden">
+
+                <img
+                    src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=800&q=85"
+                    alt="Santorini Greece"
+                    class="w-full h-72 object-cover
+                           transition duration-700
+                           group-hover:scale-110">
+
+                <span class="absolute top-4 left-4
+                             px-3 py-1 rounded-full
+                             bg-orange-400 text-slate-950
+                             text-xs font-bold">
+                    GREECE
+                </span>
+
+            </div>
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold">
+                    Santorini
+                </h3>
+
+                <p class="text-gray-400 mt-2">
+                    Famous for its white buildings, blue rooftops
+                    and stunning views of the Aegean Sea.
+                </p>
+
+                <div class="flex justify-between items-center mt-5">
+
+                    <span class="text-orange-400 text-sm">
+                        📍 Greece
+                    </span>
+
+                    <button class="text-orange-300
+                                   hover:text-white
+                                   transition">
+                        Discover →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Place 6 -->
+        <div class="group relative overflow-hidden
+                    rounded-3xl border border-white/10
+                    bg-white/5
+                    hover:border-blue-400/50
+                    hover:-translate-y-2
+                    transition-all duration-500">
+
+            <div class="relative overflow-hidden">
+
+                <img
+                    src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=85"
+                    alt="London England"
+                    class="w-full h-72 object-cover
+                           transition duration-700
+                           group-hover:scale-110">
+
+                <span class="absolute top-4 left-4
+                             px-3 py-1 rounded-full
+                             bg-blue-400 text-slate-950
+                             text-xs font-bold">
+                    UK
+                </span>
+
+            </div>
+
+            <div class="p-6">
+
+                <h3 class="text-2xl font-bold">
+                    London
+                </h3>
+
+                <p class="text-gray-400 mt-2">
+                    Discover historic landmarks, modern culture
+                    and the unique energy of London.
+                </p>
+
+                <div class="flex justify-between items-center mt-5">
+
+                    <span class="text-blue-400 text-sm">
+                        📍 United Kingdom
+                    </span>
+
+                    <button class="text-blue-300
+                                   hover:text-white
+                                   transition">
+                        Discover →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom CTA -->
+    <div class="relative mt-16 overflow-hidden rounded-3xl
+                border border-white/10
+                bg-gradient-to-r from-cyan-500/10
+                via-purple-500/10
+                to-pink-500/10
+                p-10 md:p-14 text-center">
+
+        <div class="absolute -top-20 -left-20
+                    w-60 h-60 bg-cyan-500/20
+                    rounded-full blur-3xl">
+        </div>
+
+        <div class="absolute -bottom-20 -right-20
+                    w-60 h-60 bg-purple-500/20
+                    rounded-full blur-3xl">
+        </div>
+
+        <div class="relative">
+
+            <h3 class="text-3xl md:text-4xl font-bold">
+                The World Is Waiting
+            </h3>
+
+            <p class="text-gray-400 max-w-xl mx-auto mt-4">
+                There are countless beautiful places to discover.
+                Start exploring and find your next destination.
+            </p>
+
+            <button class="mt-7 px-8 py-3 rounded-full
+                           bg-gradient-to-r from-cyan-400
+                           to-purple-500
+                           text-white font-semibold
+                           hover:scale-105
+                           hover:shadow-xl
+                           hover:shadow-purple-500/30
+                           transition-all duration-300">
+                Start Exploring ✈️
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

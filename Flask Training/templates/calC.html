@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Calculator</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="text-center items-center bg-sky-500 flex flex-col text-xl mt-10 text-white font-sans">
+    
+    <h1 class="text-3xl font-bold mb-2">Engineering Calculator</h1>
+    <p class="text-sm opacity-90 mb-6 max-w-xs text-center leading-tight">Note: For √, sin, and cos, only enter a value into input <strong>a</strong>.</p>
+    
+    <form action="{{ url_for('calC') }}" method="post" class="flex flex-col items-center gap-6 bg-sky-600 p-8 rounded-xl shadow-lg">
+        
+        <!-- Inputs -->
+        <div class="flex gap-4">
+            <div class="flex items-center gap-2">
+                <label for="a" class="font-semibold">a:</label>
+                <input type="number" step="any" name="a" placeholder="Enter value" required class="bg-white text-black p-2 rounded border-none outline-none w-32 shadow-inner">
+            </div>
+            <div class="flex items-center gap-2">
+                <label for="b" class="font-semibold">b:</label>
+                <!-- Removed 'required' so single-input engineering functions work seamlessly -->
+                <input type="number" step="any" name="b" placeholder="Enter value" class="bg-white text-black p-2 rounded border-none outline-none w-32 shadow-inner">
+            </div>
+        </div>
+
+        <!-- Buttons split into logical layout blocks -->
+        <div class="flex flex-col gap-3 w-full">
+            <!-- Arithmetic Operators -->
+            <div class="flex gap-2 justify-center">
+                <button class="flex-1 text-white bg-blue-700 hover:bg-blue-800 py-3 rounded-lg font-bold shadow transition cursor-pointer" name="operation" value="add">+</button>
+                <button class="flex-1 text-white bg-blue-700 hover:bg-blue-800 py-3 rounded-lg font-bold shadow transition cursor-pointer" name="operation" value="sub">-</button>
+                <button class="flex-1 text-white bg-blue-700 hover:bg-blue-800 py-3 rounded-lg font-bold shadow transition cursor-pointer" name="operation" value="mul">*</button>
+                <button class="flex-1 text-white bg-blue-700 hover:bg-blue-800 py-3 rounded-lg font-bold shadow transition cursor-pointer" name="operation" value="div">/</button>
+            </div>
+            
+            <!-- Engineering Functions -->
+            <div class="flex gap-2 justify-center">
+                <button class="flex-1 text-white bg-teal-600 hover:bg-teal-700 py-3 rounded-lg font-semibold text-base shadow transition cursor-pointer" name="operation" value="pow">aᵇ</button>
+                <button class="flex-1 text-white bg-teal-600 hover:bg-teal-700 py-3 rounded-lg font-semibold text-base shadow transition cursor-pointer" name="operation" value="sqrt">√a</button>
+                <button class="flex-1 text-white bg-teal-600 hover:bg-teal-700 py-3 rounded-lg font-semibold text-base shadow transition cursor-pointer" name="operation" value="sin">sin(a)</button>
+                <button class="flex-1 text-white bg-teal-600 hover:bg-teal-700 py-3 rounded-lg font-semibold text-base shadow transition cursor-pointer" name="operation" value="cos">cos(a)</button>
+            </div>
+        </div>
+    </form>
+
+    {% if r is not none %}
+        <h1 class="mt-6 text-2xl font-bold bg-white text-sky-700 px-6 py-2 rounded-full shadow">
+            Result: {{ r }}
+        </h1>
+    {% endif %}
+
+</body>
+</html>

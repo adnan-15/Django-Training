@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Portal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    #6c63ff55,
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 85% 80%,
+                    #00d4ff44,
+                    transparent 30%
+                ),
+                #080b18;
+
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Decorative circles */
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(2px);
+            z-index: -1;
+        }
+
+        .circle-one {
+            width: 250px;
+            height: 250px;
+
+            background: linear-gradient(
+                135deg,
+                #6c63ff,
+                #00d4ff
+            );
+
+            top: -100px;
+            left: -80px;
+        }
+
+        .circle-two {
+            width: 300px;
+            height: 300px;
+
+            background: linear-gradient(
+                135deg,
+                #ff4ecd,
+                #6c63ff
+            );
+
+            bottom: -150px;
+            right: -100px;
+        }
+
+        /* Main card */
+
+        .container {
+            width: 650px;
+
+            padding: 65px 50px;
+
+            text-align: center;
+
+            border-radius: 30px;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.45),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Logo */
+
+        .logo {
+            width: 80px;
+            height: 80px;
+
+            margin: 0 auto 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 22px;
+
+            background: linear-gradient(
+                135deg,
+                #6c63ff,
+                #00d4ff
+            );
+
+            font-size: 34px;
+            font-weight: 700;
+
+            box-shadow:
+                0 15px 40px rgba(0, 212, 255, 0.2);
+        }
+
+        /* Heading */
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.1;
+
+            margin-bottom: 15px;
+
+            background: linear-gradient(
+                90deg,
+                #ffffff,
+                #9da7ff,
+                #63eaff
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: #a8afc7;
+
+            font-size: 16px;
+
+            max-width: 450px;
+
+            margin: 0 auto 40px;
+
+            line-height: 1.6;
+        }
+
+        /* Buttons */
+
+        .buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 18px;
+        }
+
+        .btn {
+            min-width: 170px;
+
+            padding: 15px 25px;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+        .register-btn {
+            color: white;
+
+            background: linear-gradient(
+                135deg,
+                #6c63ff,
+                #00c6ff
+            );
+
+            box-shadow:
+                0 10px 30px rgba(0, 198, 255, 0.18);
+        }
+
+        .login-btn {
+            color: white;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+        }
+
+        .register-btn:hover {
+            box-shadow:
+                0 15px 40px rgba(0, 198, 255, 0.3);
+        }
+
+        .login-btn:hover {
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        /* Footer */
+
+        .footer {
+            margin-top: 45px;
+
+            color: #666d85;
+
+            font-size: 12px;
+        }
+
+        .footer span {
+            color: #8c84ff;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 700px) {
+
+            .container {
+                width: calc(100% - 30px);
+                padding: 50px 25px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="circle circle-one"></div>
+    <div class="circle circle-two"></div>
+
+    <main class="container">
+
+        <h1>
+            Student Portal
+        </h1>
+
+        <p class="subtitle">
+            Your gateway to a smarter and simpler
+            student experience.
+        </p>
+
+        <div class="buttons">
+
+            <a
+                href="{% url 'register' %}"
+                class="btn register-btn"
+            >
+                Register →
+            </a>
+
+            <a
+                href="{% url 'login' %}"
+                class="btn login-btn"
+            >
+                Login →
+            </a>
+
+        </div>
+
+        <div class="footer">
+            Student Portal · <span>Welcome</span>
+        </div>
+
+    </main>
+
+</body>
+</html>

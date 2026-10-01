@@ -1,0 +1,56 @@
+<!-- Font & Icon Dependencies -->
+<link rel="preconnect" href="https://googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cloudflare.com">
+
+<!-- Background Container Wrapper -->
+<div style="min-height: 90vh; display: flex; align-items: center; justify-content: center; font-family: 'Inter', system-ui, -apple-system, sans-serif; background-color: #f8fafc; padding: 40px 20px; box-sizing: border-box;">
+  
+  <!-- Dashboard Main Panel Box -->
+  <div style="background: #ffffff; max-width: 680px; width: 100%; border-radius: 20px; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0; padding: 44px 40px; box-sizing: border-box;">
+    
+    <!-- Header Control Layout Block -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 36px; border-bottom: 1px solid #f1f5f9; padding-bottom: 24px; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <h2 style="margin: 0; font-size: 24px; font-weight: 700; color: #0f172a; letter-spacing: -0.02em;">Library Control Dashboard</h2>
+        <p style="margin: 4px 0 0 0; font-size: 14px; color: #64748b;">Welcome back! Manage your physical inventory and tracking systems.</p>
+      </div>
+      
+      <!-- Logout Action Pill -->
+      <a href="/logout" style="display: inline-flex; align-items: center; gap: 6px; background-color: #fef2f2; border: 1px solid #fee2e2; color: #dc2626; padding: 8px 14px; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 600;">
+        <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+      </a>
+    </div>
+
+    <!-- Dual Action Workspace Grid -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; @media(max-width: 500px){grid-template-columns: 1fr;}">
+      
+      <!-- Feature Card 1: Issue Book -->
+      <a href="/issue" style="display: flex; flex-direction: column; align-items: flex-start; padding: 24px; background-color: #ffffff; border: 1px solid #cbd5e1; border-radius: 14px; text-decoration: none; text-align: left; transition: transform 0.2s, border-color 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+        <div style="background-color: #dcfce7; color: #16a34a; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px;">
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <span style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">Issue a New Book</span>
+        <span style="font-size: 13px; color: #64748b; line-height: 1.4;">Allocate system books, assign dates, and track student logs.</span>
+      </a>
+
+      <!-- Feature Card 2: View Inventory -->
+      <a href="/books" style="display: flex; flex-direction: column; align-items: flex-start; padding: 24px; background-color: #ffffff; border: 1px solid #cbd5e1; border-radius: 14px; text-decoration: none; text-align: left; transition: transform 0.2s, border-color 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+        <div style="background-color: #e0e7ff; color: #4f46e5; width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 16px;">
+          <i class="fa-regular fa-folder-open"></i>
+        </div>
+        <span style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">View Book Registries</span>
+        <span style="font-size: 13px; color: #64748b; line-height: 1.4;">Browse current distributions, search IDs, and manage due dates.</span>
+      </a>
+
+    </div>
+
+    <!-- System Status Bottom Bar -->
+    <div style="margin-top: 36px; padding-top: 20px; border-top: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #94a3b8;">
+      <span><i class="fa-solid fa-circle" style="color: #22c55e; font-size: 8px; margin-right: 4px; vertical-align: middle;"></i> Portal Online</span>
+      <span>v2.4.0</span>
+    </div>
+
+  </div>
+</div>

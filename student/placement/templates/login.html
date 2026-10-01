@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background:
+                radial-gradient(circle at top left, #263cff55, transparent 35%),
+                radial-gradient(circle at bottom right, #00e5ff44, transparent 35%),
+                #080b18;
+
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Decorative background */
+
+        body::before,
+        body::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        body::before {
+            width: 280px;
+            height: 280px;
+
+            background: linear-gradient(
+                135deg,
+                #6c63ff,
+                #00d4ff
+            );
+
+            top: -100px;
+            left: -80px;
+
+            filter: blur(2px);
+        }
+
+        body::after {
+            width: 250px;
+            height: 250px;
+
+            background: linear-gradient(
+                135deg,
+                #ff4ecd,
+                #6c63ff
+            );
+
+            bottom: -100px;
+            right: -70px;
+
+            filter: blur(2px);
+        }
+
+        /* Login Card */
+
+        .container {
+            width: 430px;
+            padding: 40px;
+
+            border-radius: 25px;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.45),
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Logo */
+
+        .logo {
+            width: 65px;
+            height: 65px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 18px;
+
+            background: linear-gradient(
+                135deg,
+                #6c63ff,
+                #00d4ff
+            );
+
+            font-size: 28px;
+            font-weight: 700;
+
+            box-shadow: 0 10px 30px #00d4ff33;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #a8afc7;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        /* Inputs */
+
+        .input-group {
+            margin-bottom: 22px;
+        }
+
+        .input-group label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-size: 13px;
+            font-weight: 500;
+
+            color: #d7daf0;
+        }
+
+        .input-group input {
+            width: 100%;
+
+            padding: 15px 17px;
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+
+            border-radius: 12px;
+
+            outline: none;
+
+            background: rgba(255, 255, 255, 0.06);
+
+            color: white;
+
+            font-size: 14px;
+
+            transition: 0.3s ease;
+        }
+
+        .input-group input::placeholder {
+            color: #858ca4;
+        }
+
+        .input-group input:focus {
+            border-color: #6c63ff;
+
+            background: rgba(255, 255, 255, 0.09);
+
+            box-shadow:
+                0 0 0 3px rgba(108, 99, 255, 0.12),
+                0 8px 25px rgba(108, 99, 255, 0.08);
+        }
+
+        /* Button */
+
+        .login-btn {
+            width: 100%;
+
+            padding: 15px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            background: linear-gradient(
+                135deg,
+                #6c63ff,
+                #00c6ff
+            );
+
+            color: white;
+
+            font-size: 15px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+
+            box-shadow:
+                0 10px 25px rgba(0, 198, 255, 0.18);
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 15px 35px rgba(0, 198, 255, 0.28);
+        }
+
+        .login-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Register link */
+
+        .register {
+            text-align: center;
+
+            margin-top: 25px;
+
+            font-size: 13px;
+
+            color: #858ca4;
+        }
+
+        .register a {
+            color: #8c84ff;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .register a:hover {
+            color: #00d4ff;
+        }
+
+        .footer {
+            text-align: center;
+
+            margin-top: 20px;
+
+            font-size: 11px;
+
+            color: #666d85;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 500px) {
+
+            .container {
+                width: calc(100% - 30px);
+                padding: 30px 25px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Welcome Back</h1>
+
+        <p class="subtitle">
+            Login to your student account
+        </p>
+
+        <form action="{% url 'loginForm' %}" method="POST">
+
+            {% csrf_token %}
+
+            <div class="input-group">
+
+                <label for="si">
+                    Student ID
+                </label>
+
+                <input
+                    type="text"
+                    id="si"
+                    name="si"
+                    placeholder="Enter your student ID"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label for="sp">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="sp"
+                    name="sp"
+                    placeholder="Enter your password"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="login-btn"
+            >
+                Login →
+            </button>
+
+        </form>
+
+
+        <div class="register">
+
+            Don't have an account?
+
+            <a href="{% url 'register' %}">
+                Register here
+            </a>
+
+        </div>
+
+
+        <div class="footer">
+            Student Portal · Secure Login
+        </div>
+
+    </div>
+
+</body>
+</html>
